@@ -21,10 +21,10 @@ s = "(S)outh"
 w = "(W)est"
 e = "(E)ast"
 
-
 position = 11
+
 while position != 31:
-    if position == 11 or position == 21:
+    if position == 11:
         print("You can travel: ", n)
         direction = input("Direction: ")
         if direction == "n" or direction == "N":
@@ -40,6 +40,8 @@ while position != 31:
             position += 10
         elif direction == "s" or direction == "S":
             position -= 1
+        else:
+            print("Not a valid direction!")
     elif position == 13:
         print("You can travel: " + e + " or " + s + ".")
         direction = input("Direction: ")
@@ -47,4 +49,49 @@ while position != 31:
             position += 10
         elif direction == "s" or direction == "S":
             position -= 1
-    
+        else:
+            print("Not a valid direction!")
+    elif position == 21:
+        print("You can travel: " + n + ".")
+        direction = input("Direction: ")
+        if direction == "n" or direction == "N":
+            position += 1
+        else:
+            print("Not a valid direction!")
+    elif position == 22:
+        print("You can travel: " + s + " or " + w + ".")
+        direction = input("Direction: ")
+        if direction == "s" or direction == "S":
+            position -= 1
+        elif direction == "w" or direction == "W":
+            position -= 10
+        else:
+            print("Not a valid direction!")
+    elif position == 23:
+        print("You can travel: " + w + " or " + e + ".")
+        direction = input("Direction: ")
+        if direction == "w" or direction == "W":
+            position -= 10
+        elif direction == "e" or direction == "E":
+            position += 10
+        else:
+            print("Not a valid direction!")
+    elif position == 33:
+        print("You can travel: " + s + " or " + w + ".")
+        direction = input("Direction: ")
+        if direction == "s" or direction == "S":
+            position -= 1
+        elif direction == "w" or direction == "W":
+            position -= 10
+        else:
+            print("Not a valid direction!")
+    elif position == 32:
+        print("You can travel: " + s + " or " + n + ".")
+        direction = input("Direction: ")
+        if direction == "s" or direction == "S":
+            position -= 1
+        elif position == "n" or direction == "N":
+            position += 1      
+        else:
+            print("Not a valid direction!")
+print("Victory!")
