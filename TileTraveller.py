@@ -21,10 +21,10 @@ s = "(S)outh"
 w = "(W)est"
 e = "(E)ast"
 
-position = 11
+position = 11 #Byrjum á 1,1 sem er 11 og sigur er á 3,1 sem er 31
 
-while position != 31:
-    if position == 11:
+while position != 31: #á meðan position er ekki 31 förum við í gegnum þessi skref annars prentast út victory!
+    if position == 11: #byrjunarreiturinn okkar þar sem bara er hægt að fara norður
         print("You can travel: ", n)
         direction = input("Direction: ")
         if direction == "n" or direction == "N":
